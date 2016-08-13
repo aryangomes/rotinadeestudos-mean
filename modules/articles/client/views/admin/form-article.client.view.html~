@@ -11,7 +11,7 @@
     <form name="vm.form.articleForm" class="form-horizontal" ng-submit="vm.save(vm.form.articleForm.$valid)" novalidate>
       <fieldset>
         <div class="form-group" show-errors>
-          <label class="control-label" for="title">Titulo</label>
+          <label class="control-label" for="title">Title</label>
           <input name="title" type="text" ng-model="vm.article.title" id="title" class="form-control" placeholder="Title" required>
           <div ng-messages="vm.form.articleForm.title.$error" role="alert">
             <p class="help-block error-text" ng-message="required">Article title is required.</p>
