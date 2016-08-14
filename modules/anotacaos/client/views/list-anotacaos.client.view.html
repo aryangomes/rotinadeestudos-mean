@@ -1,0 +1,22 @@
+<section>
+  <div class="page-header">
+    <h1>Anotacaos</h1>
+  </div>
+  <div class="list-group">
+    <a data-ng-repeat="anotacao in vm.anotacaos"
+       data-ui-sref="anotacaos.view({ anotacaoId: anotacao._id })"
+       class="list-group-item">
+      <small class="list-group-item-text">
+        Posted on
+        <span data-ng-bind="anotacao.created | date:'mediumDate'"></span>
+        by
+        <span data-ng-if="anotacao.user" data-ng-bind="anotacao.user.displayName"></span>
+        <span data-ng-if="!anotacao.user">Deleted User</span>
+      </small>
+      <h4 class="list-group-item-heading" data-ng-bind="anotacao.titulo"></h4>
+    </a>
+  </div>
+  <div class="alert alert-warning text-center" data-ng-if="vm.anotacaos.$resolved && !vm.anotacaos.length">
+    No Anotacaos yet, why don't you <a data-ui-sref="anotacaos.create">create one</a>?
+  </div>
+</section>

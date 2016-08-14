@@ -13,7 +13,7 @@
         <span data-ng-if="disciplina.user" data-ng-bind="disciplina.user.displayName"></span>
         <span data-ng-if="!disciplina.user">Deleted User</span>
       </small>
-      <h4 class="list-group-item-heading" data-ng-bind="disciplina.name"></h4>
+      <h4 class="list-group-item-heading" data-ng-bind="disciplina.disciplina"></h4>
     </a>
   </div>
   <div class="alert alert-warning text-center" data-ng-if="vm.disciplinas.$resolved && !vm.disciplinas.length">

@@ -7,9 +7,9 @@
       <fieldset>
         <div class="form-group" show-errors>
           <label class="control-label" for="name">Name</label>
-          <input name="name" type="text" ng-model="vm.disciplina.name" id="name" class="form-control" placeholder="Name" required>
+          <input name="name" type="text" ng-model="vm.disciplina.disciplina" id="name" class="form-control" placeholder="Digite uma disciplina..." required>
           <div ng-messages="vm.form.disciplinaForm.name.$error" role="alert">
-            <p class="help-block error-text" ng-message="required">Disciplina name is required.</p>
+            <p class="help-block error-text" ng-message="required">Disciplina é obrigatória.</p>
           </div>
         </div>
         <div class="form-group">

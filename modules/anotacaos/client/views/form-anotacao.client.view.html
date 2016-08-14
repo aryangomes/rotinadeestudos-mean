@@ -1,0 +1,56 @@
+<section>
+    <div class="page-header">
+        <h1>{{vm.anotacao._id ? 'Edit Anotacao' : 'New Anotacao'}}</h1>
+    </div>
+    <div class="col-md-12">
+        <form name="vm.form.anotacaoForm" class="form-horizontal" ng-submit="vm.save(vm.form.anotacaoForm.$valid)" novalidate>
+            <fieldset>
+                <!--  INPUT -->
+                <div class="form-group" show-errors>
+                    <label class="control-label" for="titulo">Título da Anotação</label>
+                    <input name="name" type="text" ng-model="vm.anotacao.titulo" id="titulo" class="form-control" placeholder="Name" required>
+                    <div ng-messages="vm.form.anotacaoForm.name.$error" role="alert">
+                        <p class="help-block error-text" ng-message="required">Anotacao name is required.</p>
+                    </div>
+                </div>
+                <!--  INPUT -->
+                
+                <!--  INPUT -->
+                <div class="form-group" show-errors>
+                    <label name="disciplina" class="control-label" for="disciplina">Disciplina</label>
+
+                    <select ng-model="vm.anotacao.idDisciplina" id="disciplina"  
+                            class="form-control" required>
+                        <option ng-repeat="disciplina  in disciplinas" value="{{disciplina._id}}">{{disciplina.disciplina}}</option>
+                    </select>
+                    {{vm.anotacao.disciplina._id}}
+                    <div ng-messages="vm.form.anotacaoForm.name.$error" role="alert">
+                        <p class="help-block error-text" ng-message="required">Disciplina is required.</p>
+                    </div>
+                </div>
+                <!--  INPUT -->
+                
+                 <!--  INPUT -->
+                <div class="form-group" show-errors>
+                    <label name="tipoanotacao" class="control-label" for="tipoanotacao">tipoAnotacao</label>
+
+                    <select ng-model="vm.anotacao.idTipoAnotacao" id="disciplina"  
+                            class="form-control" required>
+                        <option ng-repeat="tipoanotacao  in tipoanotacaos" value="{{tipoanotacao._id}}">{{tipoanotacao.tipoAnotacao}}</option>
+                    </select>
+                    {{vm.anotacao.tipoanotacao._id}}
+                    <div ng-messages="vm.form.anotacaoForm.name.$error" role="alert">
+                        <p class="help-block error-text" ng-message="required">tipoanotacao is required.</p>
+                    </div>
+                </div>
+                <!--  INPUT -->
+                <div class="form-group">
+                    <button type="submit" class="btn btn-default">{{vm.anotacao._id ? 'Update' : 'Create'}}</button>
+                </div>
+                <div ng-show="vm.error" class="text-danger">
+                    <strong ng-bind="vm.error"></strong>
+                </div>
+            </fieldset>
+        </form>
+    </div>
+</section>

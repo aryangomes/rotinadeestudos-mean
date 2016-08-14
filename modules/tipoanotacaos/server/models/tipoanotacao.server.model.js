@@ -7,13 +7,13 @@ var mongoose = require('mongoose'),
   Schema = mongoose.Schema;
 
 /**
- * Disciplina Schema
+ * Tipoanotacao Schema
  */
-var DisciplinaSchema = new Schema({
-  disciplina: {
+var TipoanotacaoSchema = new Schema({
+  tipoAnotacao: {
     type: String,
-    
-    required: 'Disciplina é obrigatória',
+    maxlength: 100,
+    required: 'Please fill Tipoanotacao name',
     trim: true
   },
   created: {
@@ -26,4 +26,4 @@ var DisciplinaSchema = new Schema({
   }
 });
 
-mongoose.model('Disciplina', DisciplinaSchema);
+mongoose.model('Tipoanotacao', TipoanotacaoSchema);
