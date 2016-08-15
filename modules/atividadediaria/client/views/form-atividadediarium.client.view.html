@@ -1,0 +1,24 @@
+<section>
+  <div class="page-header">
+    <h1>{{vm.atividadediarium._id ? 'Edit Atividadediarium' : 'New Atividadediarium'}}</h1>
+  </div>
+  <div class="col-md-12">
+    <form name="vm.form.atividadediariumForm" class="form-horizontal" ng-submit="vm.save(vm.form.atividadediariumForm.$valid)" novalidate>
+      <fieldset>
+        <div class="form-group" show-errors>
+          <label class="control-label" for="name">Name</label>
+          <input name="name" type="text" ng-model="vm.atividadediarium.name" id="name" class="form-control" placeholder="Name" required>
+          <div ng-messages="vm.form.atividadediariumForm.name.$error" role="alert">
+            <p class="help-block error-text" ng-message="required">Atividadediarium name is required.</p>
+          </div>
+        </div>
+        <div class="form-group">
+          <button type="submit" class="btn btn-default">{{vm.atividadediarium._id ? 'Update' : 'Create'}}</button>
+        </div>
+        <div ng-show="vm.error" class="text-danger">
+          <strong ng-bind="vm.error"></strong>
+        </div>
+      </fieldset>
+    </form>
+  </div>
+</section>

@@ -10,9 +10,9 @@ var mongoose = require('mongoose'),
  * Anotacao Schema
  */
 var AnotacaoSchema = new Schema({
-    idDisciplina: {
-        type: Schema.Types.ObjectId,
-        required: true,
+    disciplina: {
+        type: Schema.ObjectId,
+          ref:'Disciplina',
     },
     titulo: {
         type: String,
@@ -23,11 +23,13 @@ var AnotacaoSchema = new Schema({
     anotacao: {
         type: String,
         maxlength: 500,
+        default: '',
         required: false,
     },
-    idTipoAnotacao: {
-        type: Schema.Types.ObjectId,
+    tipoanotacao: {
+        type: Schema.ObjectId,
         required: true,
+        ref:'Tipoanotacao',
     },
     created: {
         type: Date,
