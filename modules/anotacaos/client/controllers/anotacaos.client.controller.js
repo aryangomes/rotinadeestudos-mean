@@ -12,13 +12,19 @@
     function AnotacaosController($scope, $state, Authentication, anotacao, $http) {
         var vm = this;
         getDisciplinas($http);
-          getTipoAnotacoes($http);
+        getTipoAnotacoes($http);
         vm.authentication = Authentication;
         vm.anotacao = anotacao;
         vm.error = null;
         vm.form = {};
         vm.remove = remove;
         vm.save = save;
+        $scope.checkOption = function (value, check) {
+           
+            return(check == value);
+        }
+
+
 
         // Remove existing Anotacao
         function remove() {
@@ -64,7 +70,7 @@
             });
 
         }
-        
+
         function getTipoAnotacoes($http) {
             $http.get("api/tipoanotacaos").then(function (response) {
 

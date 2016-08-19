@@ -104,7 +104,7 @@ exports.anotacaoByID = function(req, res, next, id) {
     });
   }
 
-  Anotacao.findById(id).populate('user', 'displayName').exec(function (err, anotacao) {
+  Anotacao.findById(id).populate(['user', 'displayName', 'disciplina','disciplina','tipoanotacao','tipoAnotacao']).exec(function (err, anotacao) {
     if (err) {
       return next(err);
     } else if (!anotacao) {

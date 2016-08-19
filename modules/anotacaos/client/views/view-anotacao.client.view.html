@@ -4,8 +4,14 @@
     </div>
     <div>
         <p><h3>Anotação:</h3>
-        <h4 class="list-group-item-heading" data-ng-bind="vm.anotacao.anotacao"></h4>
-        </p>
+            <h4 class="list-group-item-heading" data-ng-bind="vm.anotacao.anotacao"></h4>
+            </p>
+             <p><h3>Disciplina:</h3>
+            <h4 class="list-group-item-heading" data-ng-bind="vm.anotacao.disciplina.disciplina"></h4>
+            </p>
+              <p><h3>Tipo de Anotação</h3>
+            <h4 class="list-group-item-heading" data-ng-bind="vm.anotacao.tipoanotacao.tipoAnotacao"></h4>
+            </p>
     </div>
     <div class="pull-right"
          data-ng-show="vm.anotacao.isCurrentUserOwner">
