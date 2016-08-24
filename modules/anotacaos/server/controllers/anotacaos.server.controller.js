@@ -82,7 +82,7 @@ exports.delete = function(req, res) {
  * List of Anotacaos
  */
 exports.list = function(req, res) { 
-  Anotacao.find().sort('-created').populate('user', 'displayName').exec(function(err, anotacaos) {
+  Anotacao.find().sort('-created').populate(['user', 'displayName', 'disciplina','disciplina','tipoanotacao','tipoAnotacao']).exec(function(err, anotacaos) {
     if (err) {
       return res.status(400).send({
         message: errorHandler.getErrorMessage(err)
@@ -104,7 +104,7 @@ exports.anotacaoByID = function(req, res, next, id) {
     });
   }
 
-  Anotacao.findById(id).populate('user', 'displayName').exec(function (err, anotacao) {
+  Anotacao.findById(id).populate(['user', 'displayName', 'disciplina','disciplina','tipoanotacao','tipoAnotacao']).exec(function (err, anotacao) {
     if (err) {
       return next(err);
     } else if (!anotacao) {
