@@ -20,7 +20,7 @@ var AnotacaoSchema = new Schema({
         required: 'Título da Anotação é obrigatório',
         trim: true
     },
-    anotacao: {
+    idAnotacao: {
         type: String,
         maxlength: 500,
         default: '',
