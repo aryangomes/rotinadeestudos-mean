@@ -13,7 +13,7 @@ var RepeticaonotificacaoanotacaoSchema = new Schema({
   tipoRepeticao: {
     type: String,
     required: true,
-
+    maxLength: 45,
   },
   created: {
     type: Date,
