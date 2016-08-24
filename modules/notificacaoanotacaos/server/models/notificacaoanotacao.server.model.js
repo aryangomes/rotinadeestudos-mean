@@ -45,7 +45,7 @@ var NotificacaoanotacaoSchema = new Schema({
       type: Number,
 
   },
-
+  
   estaAtivado:{
 
     type: Boolean,
