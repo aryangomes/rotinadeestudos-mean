@@ -10,27 +10,26 @@ var mongoose = require('mongoose'),
  * Notificacaoanotacao Schema
  */
 var NotificacaoanotacaoSchema = new Schema({
-  idNotificao: {
-    type: Schema.Types.ObjectId,
-    required: true,
-  },
-  idAnotacao : {
-    type: Schema.Types.ObjectId,
-    required: true,
+  
+  anotacao : {
+     type: Schema.ObjectId, 
+   ref: 'Anotacao',
 
   },
 
-  idAnotacaoDisciplina: {
+  disciplina: {
 
-    type: Schema.Types.ObjectId,
-    required: true,
+    type: Schema.ObjectId, 
+    ref: 'Disciplina',
 
   },
 
-  idRepeticaoNotificacao: {
+  repeticaoNotificacao: {
 
-    type: Schema.Types.ObjectId,
-    required: true,
+    
+    type: Schema.ObjectId, 
+    ref: 'Repeticaonotificacaoanotacao',
+
 
   },
 
@@ -39,15 +38,11 @@ var NotificacaoanotacaoSchema = new Schema({
       type: Date,
       required: true,
 
-
   },
 
   qtdRepeticao: {
 
       type: Number,
-
-
-
 
   },
 
@@ -56,14 +51,8 @@ var NotificacaoanotacaoSchema = new Schema({
     type: Boolean,
     required: true,
 
-
   },
 
- /* type: String,
-  maxlength: 100,
-  required: 'Título da Anotação é obrigatório',
-  trim: true
-   */
   created: {
     type: Date,
     default: Date.now

@@ -5,9 +5,9 @@
     .module('notificacaoanotacaos')
     .run(menuConfig);
 
-  menuConfig.$inject = ['Menus'];
+  menuConfig.$inject = ['menuService'];
 
-  function menuConfig(Menus) {
+  /*function menuConfig(Menus) {
     // Set top bar menu items
     Menus.addMenuItem('topbar', {
       title: 'Notificacaoanotacaos',
@@ -29,4 +29,4 @@
       roles: ['user']
     });
   }
-})();
+})();*/
