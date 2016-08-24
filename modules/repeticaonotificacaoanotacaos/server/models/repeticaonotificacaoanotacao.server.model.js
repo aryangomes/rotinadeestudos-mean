@@ -10,11 +10,10 @@ var mongoose = require('mongoose'),
  * Repeticaonotificacaoanotacao Schema
  */
 var RepeticaonotificacaoanotacaoSchema = new Schema({
-  name: {
+  tipoRepeticao: {
     type: String,
-    default: '',
-    required: 'Please fill Repeticaonotificacaoanotacao name',
-    trim: true
+    required: true,
+
   },
   created: {
     type: Date,
