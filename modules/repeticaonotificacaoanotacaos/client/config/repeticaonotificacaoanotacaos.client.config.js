@@ -1,13 +1,13 @@
-(function () {
+ /*(function () {
   'use strict';
 
   angular
     .module('repeticaonotificacaoanotacaos')
     .run(menuConfig);
 
-  menuConfig.$inject = ['menuService'];
+ menuConfig.$inject = ['menuService'];
 
-/*  function menuConfig(Menus) {
+  function menuConfig(Menus) {
     // Set top bar menu items
     Menus.addMenuItem('topbar', {
       title: 'Repeticaonotificacaoanotacaos',

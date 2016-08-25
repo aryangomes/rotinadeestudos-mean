@@ -29,8 +29,8 @@
     $stateProvider
       .state('home', {
         url: '/',
-        templateUrl: 'modules/core/client/views/home.client.view.html',
-        controller: 'HomeController',
+        templateUrl: 'modules/anotacaos/client/views/list-anotacaos.client.view.html', // 'modules/core/client/views/home.client.view.html',
+        controller: 'AnotacaosListController',
         controllerAs: 'vm'
       })
       .state('not-found', {

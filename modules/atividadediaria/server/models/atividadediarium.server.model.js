@@ -10,12 +10,20 @@ var mongoose = require('mongoose'),
  * Atividadediarium Schema
  */
 var AtividadediariumSchema = new Schema({
-  name: {
-    type: String,
-    default: '',
-    required: 'Please fill Atividadediarium name',
-    trim: true
+  dataHoraInicio: {
+     type: Date,
   },
+  dataHoraFim: {
+     type: Date,
+  },
+  anotacao: {
+        type: Schema.ObjectId,
+          ref:'Anotacao',
+    },
+    disciplina: {
+        type: Schema.ObjectId,
+          ref:'Disciplina',
+    },
   created: {
     type: Date,
     default: Date.now
