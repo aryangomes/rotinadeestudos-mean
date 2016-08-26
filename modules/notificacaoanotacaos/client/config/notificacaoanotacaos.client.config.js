@@ -1,4 +1,4 @@
-(function () {
+ /*(function () {
   'use strict';
 
   angular
@@ -7,7 +7,7 @@
 
   menuConfig.$inject = ['menuService'];
 
-  /*function menuConfig(Menus) {
+ function menuConfig(Menus) {
     // Set top bar menu items
     Menus.addMenuItem('topbar', {
       title: 'Notificacaoanotacaos',

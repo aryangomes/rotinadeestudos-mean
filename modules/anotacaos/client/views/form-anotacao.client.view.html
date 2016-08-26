@@ -10,7 +10,7 @@
                     <label class="control-label" for="titulo">Título da Anotação</label>
                     <input name="name" type="text" ng-model="vm.anotacao.titulo" id="titulo" class="form-control" placeholder="Name" required>
                     <div ng-messages="vm.form.anotacaoForm.name.$error" role="alert">
-                        <p class="help-block error-text" ng-message="required">Título Anotacao name is required.</p>
+                        <p class="help-block error-text" ng-message="required">Título da Anotação é obrigatório.</p>
                     </div>
                 </div>
                 <!--  INPUT -->
@@ -22,7 +22,7 @@
                         
                     </textarea>
                     <div ng-messages="vm.form.anotacaoForm.name.$error" role="alert">
-                        <p class="help-block error-text" ng-message="required">Anotacao name is required.</p>
+                        <p class="help-block error-text" ng-message="required">Anotação é obrigatório.</p>
                     </div>
                 </div>
                 <!--  INPUT -->
@@ -37,14 +37,14 @@
                     </select>
               
                     <div ng-messages="vm.form.anotacaoForm.name.$error" role="alert">
-                        <p class="help-block error-text" ng-message="required">Disciplina is required.</p>
+                        <p class="help-block error-text" ng-message="required">Disciplina é obrigatório.</p>
                     </div>
                 </div>
                 <!--  INPUT -->
 
                 <!--  INPUT -->
                 <div class="form-group" show-errors>
-                    <label name="tipoanotacao" class="control-label" for="tipoanotacao">tipoAnotacao</label>
+                    <label name="tipoanotacao" class="control-label" for="tipoanotacao">Tipo de Anotação</label>
 
                     <select ng-model="vm.anotacao.tipoanotacao" id="disciplina"  
                             class="form-control" required>
@@ -52,12 +52,12 @@
                     </select>
                 
                     <div ng-messages="vm.form.anotacaoForm.name.$error" role="alert">
-                        <p class="help-block error-text" ng-message="required">tipoanotacao is required.</p>
+                        <p class="help-block error-text" ng-message="required">Tipo de Anotação é obrigatório.</p>
                     </div>
                 </div>
                 <!--  INPUT -->
 
-
+               
 
                 <div class="form-group">
                     <button type="submit" class="btn btn-default">{{vm.anotacao._id ? 'Update' : 'Create'}}</button>

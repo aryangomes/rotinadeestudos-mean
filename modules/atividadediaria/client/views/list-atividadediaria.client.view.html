@@ -1,6 +1,6 @@
 <section>
   <div class="page-header">
-    <h1>Atividadediaria</h1>
+    <h1>Atividade Diária</h1>
   </div>
   <div class="list-group">
     <a data-ng-repeat="atividadediarium in vm.atividadediaria"
@@ -17,6 +17,6 @@
     </a>
   </div>
   <div class="alert alert-warning text-center" data-ng-if="vm.atividadediaria.$resolved && !vm.atividadediaria.length">
-    No Atividadediaria yet, why don't you <a data-ui-sref="atividadediaria.create">create one</a>?
+    Sem Atividade diária ainda, por que não <a data-ui-sref="atividadediaria.create">criar uma</a>?
   </div>
 </section>
