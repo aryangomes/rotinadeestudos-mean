@@ -34,7 +34,7 @@ exports.invokeRolesPolicies = function () {
     roles: ['guest'],
     allows: [{
       resources: '/api/atividadediaria',
-      permissions: ['get']
+      //permissions: ['get']
     }, {
       resources: '/api/atividadediaria/:atividadediariumId',
       permissions: ['get']

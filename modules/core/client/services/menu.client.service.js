@@ -11,7 +11,7 @@
       addMenu: addMenu,
       addMenuItem: addMenuItem,
       addSubMenuItem: addSubMenuItem,
-      defaultRoles: ['user', 'admin'],
+      defaultRoles: ['guest', 'user', 'admin'],
       getMenu: getMenu,
       menus: {},
       removeMenu: removeMenu,
@@ -131,9 +131,17 @@
       };
 
       // Adding the topbar menu
-      addMenu('topbar', {
-        roles: ['*']
-      });
+      addMenu('topbar', [{
+        roles: ['admin'],
+        isPublic: true
+      }, {
+        roles: ['user'],
+        isPublic: true
+      }, {
+        roles: ['guest'],
+        isPublic: false
+      }
+      ]);
     }
 
     // Remove existing menu object by menu id

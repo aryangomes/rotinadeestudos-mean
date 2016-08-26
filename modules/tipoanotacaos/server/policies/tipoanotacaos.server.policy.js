@@ -34,7 +34,7 @@ exports.invokeRolesPolicies = function () {
     roles: ['guest'],
     allows: [{
       resources: '/api/tipoanotacaos',
-      permissions: ['get']
+      //permissions: ['get']
     }, {
       resources: '/api/tipoanotacaos/:tipoanotacaoId',
       permissions: ['get']

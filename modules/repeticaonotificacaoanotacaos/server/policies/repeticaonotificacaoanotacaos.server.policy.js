@@ -34,7 +34,7 @@ exports.invokeRolesPolicies = function () {
     roles: ['guest'],
     allows: [{
       resources: '/api/repeticaonotificacaoanotacaos',
-      permissions: ['get']
+      //permissions: ['get']
     }, {
       resources: '/api/repeticaonotificacaoanotacaos/:repeticaonotificacaoanotacaoId',
       permissions: ['get']
