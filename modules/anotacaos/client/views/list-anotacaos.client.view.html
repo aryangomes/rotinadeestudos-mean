@@ -1,6 +1,6 @@
 <section>
     <div class="page-header">
-        <h1>Anotacaos</h1>
+        <h1>Anotações</h1>
     </div>
     <div class="list-group">
         <a data-ng-repeat="anotacao in vm.anotacaos"
@@ -27,6 +27,6 @@
         </a>
     </div>
     <div class="alert alert-warning text-center" data-ng-if="vm.anotacaos.$resolved && !vm.anotacaos.length">
-        No Anotacaos yet, why don't you <a data-ui-sref="anotacaos.create">create one</a>?
+        Sem Anotações ainda, por que não <a data-ui-sref="anotacaos.create">criar uma</a>?
     </div>
 </section>
